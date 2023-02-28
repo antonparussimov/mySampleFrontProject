@@ -20,7 +20,7 @@ import NavbarToggleButton from '../../shared-components/NavbarToggleButton';
 function ToolbarLayout3(props) {
   const config = useSelector(selectFuseCurrentLayoutConfig);
   const toolbarTheme = useSelector(selectToolbarTheme);
-
+  
   return (
     <ThemeProvider theme={toolbarTheme}>
       <AppBar
@@ -29,7 +29,7 @@ function ToolbarLayout3(props) {
         color="default"
         style={{ backgroundColor: toolbarTheme.palette.background.paper }}
       >
-        <Toolbar className="container p-0 lg:px-24 min-h-48 md:min-h-64">
+        <Toolbar className="container p-0 lg:px-24 min-h-48 md:min-h-64 justify-between">
           {config.navbar.display && (
             <Hidden lgUp>
               <NavbarToggleButton className="w-40 h-40 p-0 mx-0 sm:mx-8" />
@@ -42,29 +42,7 @@ function ToolbarLayout3(props) {
             </div>
           </Hidden>
 
-          <div className="flex flex-1">
-            <Hidden smDown>
-              <NavigationSearch className="mx-16 lg:mx-24" variant="basic" />
-            </Hidden>
-          </div>
-
           <div className="flex items-center px-8 md:px-0 h-full overflow-x-auto">
-            <Hidden smUp>
-              <NavigationSearch />
-            </Hidden>
-
-            <Hidden lgUp>
-              <ChatPanelToggleButton />
-            </Hidden>
-
-            <LanguageSwitcher />
-
-            <AdjustFontSize />
-
-            <FullScreenToggle />
-
-            <QuickPanelToggleButton />
-
             <NotificationPanelToggleButton />
 
             <UserMenu />

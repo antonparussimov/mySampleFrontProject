@@ -29,6 +29,7 @@ function NavbarWrapperLayout3(props) {
   const config = useSelector(selectFuseCurrentLayoutConfig);
   const navbarTheme = useSelector(selectNavbarTheme);
   const navbar = useSelector(selectFuseNavbar);
+  console.log(navbarTheme);
 
   return (
     <>

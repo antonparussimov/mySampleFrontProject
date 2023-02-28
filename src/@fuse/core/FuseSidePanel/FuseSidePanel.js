@@ -173,7 +173,7 @@ const Root = styled('div')(({ theme }) => ({
 }));
 
 function FuseSidePanel(props) {
-  const [opened, setOpened] = useState(props.opened);
+  const [opened, setOpened] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   function toggleOpened() {

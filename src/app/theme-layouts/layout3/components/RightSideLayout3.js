@@ -5,8 +5,7 @@ import QuickPanel from '../../shared-components/quickPanel/QuickPanel';
 function RightSideLayout3() {
   return (
     <>
-      <QuickPanel />
-
+      {/* <QuickPanel /> */}
       <NotificationPanel />
     </>
   );

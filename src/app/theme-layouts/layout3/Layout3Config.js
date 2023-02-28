@@ -1,17 +1,17 @@
 const config = {
   title: 'Layout 3 - Horizontal',
   defaults: {
-    mode: 'container',
+    mode: 'fullwidth',
     containerWidth: 1120,
     scroll: 'content',
     navbar: {
       display: true,
-      style: 'fixed',
+      style: 'static',
     },
     toolbar: {
       display: true,
-      style: 'static',
-      position: 'below',
+      style: 'fixed',
+      position: 'above',
     },
     footer: {
       display: true,

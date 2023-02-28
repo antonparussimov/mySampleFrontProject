@@ -72,7 +72,7 @@ const themesConfig = {
       },
       background: {
         paper: '#1e293b',
-        default: '#111827',
+        default: '#111827', //#3399ff
       },
       error: {
         light: '#ffcdd2',
