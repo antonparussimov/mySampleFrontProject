@@ -72,7 +72,7 @@ const themesConfig = {
       },
       background: {
         paper: '#1e293b',
-        default: '#111827', //#3399ff
+        default: '#111827',
       },
       error: {
         light: '#ffcdd2',
@@ -169,7 +169,8 @@ const themesConfig = {
       },
       background: {
         paper: '#FAFBFD',
-        default: '#FFFFFF',
+        default: '#fcda4f',
+        mobile: '#111827',
       },
       error: {
         light: '#ffcdd2',

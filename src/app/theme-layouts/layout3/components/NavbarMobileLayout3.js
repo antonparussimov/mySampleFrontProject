@@ -8,8 +8,8 @@ import NavbarToggleButton from '../../shared-components/NavbarToggleButton';
 import Logo from '../../shared-components/Logo';
 
 const Root = styled('div')(({ theme }) => ({
-  backgroundColor: theme.palette.background.default,
-  color: theme.palette.text.primary,
+  backgroundColor: theme.palette.background.mobile,
+  color: theme.palette.text.primary, //'rgb(255,255,255)',
 
   '& ::-webkit-scrollbar-thumb': {
     boxShadow: `inset 0 0 0 20px ${

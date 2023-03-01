@@ -5,7 +5,7 @@ import { navbarCloseMobile, selectFuseNavbar } from 'app/store/fuse/navbarSlice'
 import clsx from 'clsx';
 import { memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectFuseCurrentLayoutConfig, selectNavbarTheme } from 'app/store/fuse/settingsSlice';
+import { selectFuseCurrentLayoutConfig, selectNavbarTheme, selectNavbarThemeDark } from 'app/store/fuse/settingsSlice';
 import NavbarLayout3 from './NavbarLayout3';
 import NavbarMobileLayout3 from './NavbarMobileLayout3';
 import NavbarToggleFab from '../../shared-components/NavbarToggleFab';
@@ -29,16 +29,16 @@ function NavbarWrapperLayout3(props) {
   const config = useSelector(selectFuseCurrentLayoutConfig);
   const navbarTheme = useSelector(selectNavbarTheme);
   const navbar = useSelector(selectFuseNavbar);
-  console.log(navbarTheme);
+  const mobileNavbarTheme = useSelector(selectNavbarThemeDark); // KKS
 
   return (
     <>
       <ThemeProvider theme={navbarTheme}>
-        <Hidden lgDown>
+        <Hidden mdDown>
           <NavbarLayout3 className={clsx(props.className)} />
         </Hidden>
 
-        <Hidden lgUp>
+        <Hidden mdUp>
           <StyledSwipeableDrawer
             anchor="left"
             variant="temporary"
@@ -50,7 +50,9 @@ function NavbarWrapperLayout3(props) {
               keepMounted: true, // Better open performance on mobile.
             }}
           >
-            <NavbarMobileLayout3 />
+            <ThemeProvider theme={mobileNavbarTheme}>
+              <NavbarMobileLayout3 />
+            </ThemeProvider>
           </StyledSwipeableDrawer>
         </Hidden>
       </ThemeProvider>

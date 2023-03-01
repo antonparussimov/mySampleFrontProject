@@ -9,12 +9,20 @@ i18next.addResourceBundle('ar', 'navigation', ar);
 
 const navigationConfig = [
   {
-    id: 'example-component',
-    title: 'Example',
-    translate: 'EXAMPLE',
+    id: 'finance',
+    title: 'Finance',
+    translate: 'FINANCE',
     type: 'item',
     icon: 'heroicons-outline:star',
-    url: 'example',
+    url: 'dashboard/finance',
+  },
+  {
+    id: 'crypto',
+    title: 'Crypto',
+    translate: 'CRYPTO',
+    type: 'item',
+    icon: 'heroicons-outline:star',
+    url: 'dashboard/crypto',
   },
 ];
 

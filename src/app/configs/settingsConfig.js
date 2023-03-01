@@ -10,7 +10,7 @@ const settingsConfig = {
   direction: i18n.dir(i18n.options.lng) || 'ltr', // rtl, ltr
   theme: {
     main: themesConfig.default,
-    navbar: themesConfig.defaultDark,
+    navbar: themesConfig.light2,
     toolbar: themesConfig.default,
     footer: themesConfig.defaultDark,
   },

@@ -4,7 +4,6 @@ import jwtDecode from 'jwt-decode';
 import jwtServiceConfig from './jwtServiceConfig';
 
 /* eslint-disable camelcase */
-
 class JwtService extends FuseUtils.EventEmitter {
   init() {
     this.setInterceptors();
